@@ -11,6 +11,7 @@
 		2E9F80AC2A56C81B00965B32 /* CellWithImageAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F80AB2A56C81B00965B32 /* CellWithImageAndText.swift */; };
 		2E9F80AE2A56D28E00965B32 /* FirstTaskConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F80AD2A56D28E00965B32 /* FirstTaskConstants.swift */; };
 		2E9F80B02A56E24800965B32 /* CellWithImageAndTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F80AF2A56E24800965B32 /* CellWithImageAndTextViewModel.swift */; };
+		2E9F80B42A56F5F600965B32 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F80B32A56F5F600965B32 /* SecondViewController.swift */; };
 		2ED251F62A55A51E00CB34AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED251F52A55A51E00CB34AD /* AppDelegate.swift */; };
 		2ED251F82A55A51E00CB34AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED251F72A55A51E00CB34AD /* SceneDelegate.swift */; };
 		2ED251FA2A55A51E00CB34AD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED251F92A55A51E00CB34AD /* TabBarController.swift */; };
@@ -44,6 +45,7 @@
 		2E9F80AB2A56C81B00965B32 /* CellWithImageAndText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithImageAndText.swift; sourceTree = "<group>"; };
 		2E9F80AD2A56D28E00965B32 /* FirstTaskConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTaskConstants.swift; sourceTree = "<group>"; };
 		2E9F80AF2A56E24800965B32 /* CellWithImageAndTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithImageAndTextViewModel.swift; sourceTree = "<group>"; };
+		2E9F80B32A56F5F600965B32 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2ED251F22A55A51E00CB34AD /* task2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED251F52A55A51E00CB34AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ED251F72A55A51E00CB34AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,8 +93,25 @@
 				2E9F80AB2A56C81B00965B32 /* CellWithImageAndText.swift */,
 				2E9F80AD2A56D28E00965B32 /* FirstTaskConstants.swift */,
 				2E9F80AF2A56E24800965B32 /* CellWithImageAndTextViewModel.swift */,
+				2E9F80B12A56EF5A00965B32 /* SecondTaskGroup */,
+				2E9F80B22A56EF7300965B32 /* ThirdTaskGroup */,
 			);
 			path = FirstTaskGroup;
+			sourceTree = "<group>";
+		};
+		2E9F80B12A56EF5A00965B32 /* SecondTaskGroup */ = {
+			isa = PBXGroup;
+			children = (
+				2E9F80B32A56F5F600965B32 /* SecondViewController.swift */,
+			);
+			path = SecondTaskGroup;
+			sourceTree = "<group>";
+		};
+		2E9F80B22A56EF7300965B32 /* ThirdTaskGroup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdTaskGroup;
 			sourceTree = "<group>";
 		};
 		2ED251E92A55A51E00CB34AD = {
@@ -278,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9F80B42A56F5F600965B32 /* SecondViewController.swift in Sources */,
 				2ED251FA2A55A51E00CB34AD /* TabBarController.swift in Sources */,
 				2E9F80B02A56E24800965B32 /* CellWithImageAndTextViewModel.swift in Sources */,
 				2ED251F62A55A51E00CB34AD /* AppDelegate.swift in Sources */,
