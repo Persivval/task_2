@@ -75,8 +75,7 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:
-                                                    cellWithImageAndText) as? CellWithImageAndText
+        let cell = tableView.dequeueReusableCell(withIdentifier:    ellWithImageAndText) as? CellWithImageAndText
         let viewModel = arrayWithImagesAndText[indexPath.row]
         cell?.configureFirst(viewModel)
         return cell ?? UITableViewCell()
