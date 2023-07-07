@@ -7,6 +7,7 @@
 
 import UIKit
 
+// ImageAndTextTableViewCellModel
 struct CellWithImageAndTextViewModel {
     
     var picture: UIImage
