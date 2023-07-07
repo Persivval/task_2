@@ -7,10 +7,11 @@
 
 import UIKit
 
+
 class FirstTaskConstants {
     
     enum Countries {
-    
+        
         static var austria: String = "Австрия"
         static var belgium: String = "Бельгия"
         static var germany: String = "Германия"
@@ -20,12 +21,13 @@ class FirstTaskConstants {
     }
     
     enum Pictures {
+        
         static var picOfAustria = UIImage(named: "Austria")
         static var picOfBelgium = UIImage(named: "Belgium")
         static var picOfGermany = UIImage(named: "Germany")
         static var picOfFrance = UIImage(named: "France")
-        static var picOfGreece = UIImage(named: "Greecr")
+        static var picOfGreece = UIImage(named: "Greece")
         
     }
-
+    
 }

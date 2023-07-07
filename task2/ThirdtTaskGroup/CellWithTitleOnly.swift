@@ -1,30 +1,18 @@
 //
-//  CellWithImageAndText.swift
+//  CellWithTitleOnly.swift
 //  task2
 //
-//  Created by Maxim Korolyuk on 06.07.2023.
+//  Created by Maxim Korolyuk on 07.07.2023.
 //
 
 import UIKit
 
-
-class CellWithImageAndText: UITableViewCell {
+class  CellWithTitleOnly: UITableViewCell {
     
-    private lazy var labelText: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.contentMode = .scaleToFill
-        label.font = label.font.withSize(20)
-        
-        return label
-    }()
-    
-    private lazy var imageFrame: UIImageView = {
-        let imageFrame = UIImageView()
-        imageFrame.layer.cornerRadius = 15
-        imageFrame.clipsToBounds = true
-        
-        return imageFrame
+    private lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .left
+        return titleLabel
     }()
     
     lazy var stackView: UIStackView = {
@@ -34,8 +22,7 @@ class CellWithImageAndText: UITableViewCell {
         stackView.distribution = .fillEqually
         stackView.spacing = 16
         
-        stackView.addArrangedSubview(imageFrame)
-        stackView.addArrangedSubview(labelText)
+        stackView.addArrangedSubview(titleLabel)
         return stackView
     }()
     
@@ -47,11 +34,10 @@ class CellWithImageAndText: UITableViewCell {
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     
-    func configureFirst(_ viewModel: CellWithImageAndTextViewModel) {
-        imageFrame.image = viewModel.picture
-        labelText.text = viewModel.description
+    func configureThird(_ viewModel: NewsWithLocationModel) {
+        titleLabel.text = viewModel.name
         contentView.addSubview(stackView)
-        
         setupConstraints()
     }
+    
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    let cellWithImageText = "cellWithImageText"
+    let cellWithImageAndText = "cellWithImageAndText"
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .grouped)
@@ -17,7 +17,6 @@ class FirstViewController: UIViewController {
         tableView.separatorStyle = .singleLine
         
         return tableView
-        
     }()
     
     let arrayWithImagesAndText: [CellWithImageAndTextViewModel] = [
@@ -35,13 +34,11 @@ class FirstViewController: UIViewController {
                                       description: FirstTaskConstants.Countries.germany),
         CellWithImageAndTextViewModel(picture: FirstTaskConstants.Pictures.picOfGreece ?? UIImage(),
                                       description: FirstTaskConstants.Countries.greece)
-        
     ]
     
     private func setupView() {
         view.addSubview(tableView)
     }
-    
     
     private func setupConstraints() {
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -63,7 +60,6 @@ class FirstViewController: UIViewController {
         
         setupView()
         setupConstraints()
-        
     }
     
 }
@@ -71,11 +67,11 @@ class FirstViewController: UIViewController {
 extension FirstViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         arrayWithImagesAndText.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: сellWithImageAndText) as? CellWithImageAndText
+        let cell = tableView.dequeueReusableCell(withIdentifier:
+                                                    cellWithImageAndText) as? CellWithImageAndText
         let viewModel = arrayWithImagesAndText[indexPath.row]
         cell?.configureFirst(viewModel)
         return cell ?? UITableViewCell()
@@ -84,5 +80,6 @@ extension FirstViewController: UITableViewDataSource {
 }
 
 extension FirstViewController: UITableViewDelegate {
+    
 }
 
