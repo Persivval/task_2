@@ -12,7 +12,7 @@ class FirstViewController: UIViewController {
     let cellWithImageAndText = "cellWithImageAndText"
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
+        let tableView = UITableView(frame: CGRect.zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .singleLine
         
@@ -51,7 +51,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
-        tableView.rowHeight = 150
+        tableView.sectionHeaderTopPadding = 0.0
         tableView.register(CellWithImageAndText.self,
                            forCellReuseIdentifier: "cellWithImageAndText")
         
@@ -70,8 +70,7 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:
-                                                    cellWithImageAndText) as? CellWithImageAndText
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellWithImageAndText) as? CellWithImageAndText
         let viewModel = arrayWithImagesAndText[indexPath.row]
         cell?.configureFirst(viewModel)
         return cell ?? UITableViewCell()

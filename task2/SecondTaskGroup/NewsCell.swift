@@ -8,8 +8,8 @@
 
 import UIKit
 
-
-class NewsCell: UITableViewCell {
+// NewTableViewCell
+final class NewsCell: UITableViewCell {
     
     private lazy var newsLabel: UILabel = {
         let label = UILabel()
@@ -42,9 +42,9 @@ class NewsCell: UITableViewCell {
     
     func setupConstraints() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15).isActive = true
         stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -15).isActive = true
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     

@@ -7,8 +7,8 @@
 
 import UIKit
 
-
-class CellWithImageAndText: UITableViewCell {
+// ImageAndTextTableViewCell
+final class CellWithImageAndText: UITableViewCell {
     
     private lazy var labelText: UILabel = {
         let label = UILabel()
@@ -45,6 +45,7 @@ class CellWithImageAndText: UITableViewCell {
         stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        stackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     func configureFirst(_ viewModel: CellWithImageAndTextViewModel) {
